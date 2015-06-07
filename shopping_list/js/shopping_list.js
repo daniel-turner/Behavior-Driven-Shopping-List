@@ -10,10 +10,11 @@ function ShoppingListItem (name, description) {
     this.is_done = false;
   }
   this.render = function(){
-    var sentence = '<li class =\"completed_' + this.is_done + '\"> \
+    var sentence = '<ul>' + '<li class =\"completed_' + this.is_done + '\"> \
                       <span>' + this.name + '</span> \
                       <span>' + this.description + '</span>\
-                    </li>';
+                    </li>' + '</ul>';
+    console.log(sentence);
     return sentence;
   }
 };
