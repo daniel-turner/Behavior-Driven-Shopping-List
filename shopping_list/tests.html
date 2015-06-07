@@ -6,7 +6,21 @@
 </head>
 <body>
 
+<div id="mocha"></div>
+<div id="messages"></div>
+
+
+  <!-- Mocha Testing Framework and Test Specs -->
+
+  <script src="js/mocha.js"></script>
+  <script src="js/expect.js"></script>
+  <script src="js/chai.js"></script>
+  <script src="js/shopping_list.js"></script>
+  <script>mocha.setup('bdd');</script>
+  <script src="test/test_spec.js"></script>
+  <script>mocha.run();</script>
+
+
 </body>
-<script type="text/javascript" src="js/shopping_list.js"></script>
-<script type="text/javascript" src="test/test_spec.js"></script>
+
 </html>
