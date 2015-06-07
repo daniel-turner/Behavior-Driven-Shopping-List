@@ -83,8 +83,8 @@ describe('Behavior Driven Shopping List', function () {
 
       it('render should return a string wrapped in <ul>s', function() {
 
-        apple.render().indexOf('<ul>').should.be.above(-1);
-        apple.render().lastIndexOf('</ul>').should.be.above(-1);
+        apple.render().indexOf('<li>').should.be.above(-1);
+        apple.render().lastIndexOf('</li>').should.be.above(-1);
 
       });
 
@@ -112,6 +112,7 @@ describe('Behavior Driven Shopping List', function () {
 
               it('ShoppingList has a property named items', function() {
                 ShoppingList.should.have.property('items');
+                listy.items.should.be.an.array;
               });
 
 
@@ -127,23 +128,39 @@ describe('Behavior Driven Shopping List', function () {
               describe('Methods', function(){
 
                 describe('addItem', function () {
-
-
-                  it('addItem should be a bunction', function (done) {
-                    addItem.should.be.a.function;
+                  it('addItem should be a function', function () {
+                    listy.addItem.should.be.a.function;
                   });
+                  it('should only pass in items that are a ShoppingListItem', function (items) {
+                    items.should.should.be.an.instanceof(ShoppingListItem);
+                  });
+                  it('should pass a listItem into the items array', function () {
+                    listy.items.should.be.should.have.length.above(0);
+                  });
+
 
                 });
 
                 describe('removeItem', function () {
-                  it('removeItem should be a bunction', function (done) {
-                    addItem.should.be.a.function;
+                  it('removeItem should be a function', function () {
+                    listy.addItem.should.be.a.function;
                   });
+                  it('should remove an item from the shopping list ', function (items) {
+
+
+
+
+
+                  });
+
+
+
+
                 });
 
                 describe('render', function () {
-                  it('render should be a bunction', function (done) {
-                    addItem.should.be.a.function;
+                  it('render should be a function', function () {
+                    listy.addItem.should.be.a.function;
                   });
                 });
 
