@@ -8,11 +8,9 @@ describe('Behavior Driven Shopping List', function () {
       var apple = new ShoppingListItem('apple');
     });
 
-    it('Shopping List Item is a class', function (done) {
-      Shopping_List_Item.should.be.a.function;
-
+    it('ShoppingListItem is a function', function () {
+      ShoppingListItem.should.be.a('function');
     });
-
 
 
   });
