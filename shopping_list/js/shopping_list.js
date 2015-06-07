@@ -46,6 +46,12 @@ function Shopping_List() {
     if(item instanceof ShoppingListItem) {
 
       var index = this.items.indexOf(item);
+
+      if(index === -1) {
+
+        return;
+      }
+
       this.items.splice(index,1);
       return;
     }
