@@ -1,4 +1,5 @@
 var should = chai.should();
+var expect = chai.expect;
 
 describe('Behavior Driven Shopping List', function () {
 
@@ -138,7 +139,7 @@ describe('Behavior Driven Shopping List', function () {
                 //need to call fucntion and have it test for the error being thrown
                 // var hat = 'hat';
                 // expect(listy.addItem).to.throw(Error);
-               //expect((listy.addItem).bind(listy, 'hat')).to.throw(new Error('Attempt to add an item to shopping cart that is not a ShoppingListItem','shopping_list.js'));
+               expect((listy.addItem).bind(listy, 'hat')).to.throw(new Error('Attempt to add an item to shopping cart that is not a ShoppingListItem','shopping_list.js'));
 
               });
 
