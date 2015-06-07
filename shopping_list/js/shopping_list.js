@@ -31,7 +31,7 @@ function Shopping_List() {
       return;
     }
 
-    throw new TypeError('Attempt to add an item to shopping cart that is not a ShoppingListItem','shopping_list.js');
+    throw new Error('Attempt to add an item to shopping cart that is not a ShoppingListItem','shopping_list.js');
 
   };
 
