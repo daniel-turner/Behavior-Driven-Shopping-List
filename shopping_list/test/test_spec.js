@@ -10,6 +10,7 @@ describe('Behavior Driven Shopping List', function () {
 
     it('Shopping List Item is a class', function (done) {
       Shopping_List_Item.should.be.a.function;
+
     });
 
 
