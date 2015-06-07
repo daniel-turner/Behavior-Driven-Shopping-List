@@ -37,6 +37,11 @@ function Shopping_List() {
 
   this.removeItem = function(item) {
 
+    if(item === undefined) {
+
+      this.items.pop();
+    }
+
     if(item instanceof ShoppingListItem) {
 
       var index = this.items.indexOf(item);
