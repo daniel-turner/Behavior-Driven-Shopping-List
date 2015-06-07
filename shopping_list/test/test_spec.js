@@ -4,9 +4,11 @@ describe('Behavior Driven Shopping List', function () {
 
   describe('Shopping List Item', function () {
 
-   beforeEach(function () {
-     var apple = new ShoppingListItem('apple','tasty and red; no worms');
-   });
+    var apple;
+
+     beforeEach(function () {
+       apple = new ShoppingListItem('apple','tasty and red; no worms');
+     });
 
 
     it('ShoppingListItem is a function', function () {
