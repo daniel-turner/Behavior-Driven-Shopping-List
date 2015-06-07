@@ -1,7 +1,7 @@
 function ShoppingListItem (name, description) {
   this.name = name;
   this.description = description;
-  this.is_done = is_done;
+  this.is_done = null;
 
   this.check = function(){
     is_done = true;
