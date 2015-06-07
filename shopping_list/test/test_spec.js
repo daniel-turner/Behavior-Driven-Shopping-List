@@ -159,6 +159,7 @@ describe('Behavior Driven Shopping List', function () {
             before(function () {
               plum = new ShoppingListItem('plum','the softer the sweeter!');
               peach = new ShoppingListItem('peach','the softer the sweeter!');
+
             });
 
             describe('removeItem', function () {
@@ -173,15 +174,15 @@ describe('Behavior Driven Shopping List', function () {
                 //listy.items.should.have.length.equals(0);
 
               });
-              it('should remove the last item if no parameters are given', function (done) {
+              it('should remove the last item if no parameters are given', function () {
                 //adds plum and a peach, removes peach (its at the end)
                 listy.addItem(plum);
                 listy.addItem(peach);
                 listy.removeItem();
                 listy.items.should.not.contain(peach);
               });
-              it('should only remove items that are on the list', function (done) {
-                var candle = 'candle';
+              it('should only remove items that are on the list', function () {
+                var candle = new ShoppingListItem('candle','made with wax');;
                 listy.addItem(plum);
                 listy.addItem(peach);
                 listy.removeItem(candle);
@@ -193,9 +194,9 @@ describe('Behavior Driven Shopping List', function () {
               it('render should be a function', function () {
                 listy.addItem.should.be.a.function;
               });
-              it('should concat the results in a ul list tag', function (done) {
-                apple.render().indexOf('<ul>').should.be.above(-1);
-                apple.render().lastIndexOf('</ul>').should.be.above(-1);
+              it('should concat the results in a ul list tag', function () {
+                listy.render().indexOf('<ul>').should.be.above(-1);
+                listy.render().lastIndexOf('</ul>').should.be.above(-1);
               });
             });
 
