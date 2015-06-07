@@ -40,12 +40,14 @@ function Shopping_List() {
     if(item === undefined) {
 
       this.items.pop();
+      return;
     }
 
     if(item instanceof ShoppingListItem) {
 
       var index = this.items.indexOf(item);
       this.items.splice(index,1);
+      return;
     }
 
     throw new TypeError('Attempt to remove an item from shopping cart that is not a ShoppingListItem', 'shopping_list.js');
