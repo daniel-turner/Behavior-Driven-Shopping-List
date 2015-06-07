@@ -4,9 +4,10 @@ describe('Behavior Driven Shopping List', function () {
 
   describe('Shopping List Item', function () {
 
-    beforeEach(function () {
-      var apple = new ShoppingListItem('apple','tasty and red; no worms');
-    });
+   beforeEach(function () {
+     var apple = new ShoppingListItem('apple','tasty and red; no worms');
+   });
+
 
     it('ShoppingListItem is a function', function () {
 
@@ -30,7 +31,7 @@ describe('Behavior Driven Shopping List', function () {
 
     describe('constructor', function(){
 
-      it('ShoppingListItem sets parameters at instantiation', function{
+      it('ShoppingListItem sets parameters at instantiation', function (){
 
         apple.name.should.be.equal('apple');
         apple.description.should.be.equal('tasty and red; no worms');
@@ -80,7 +81,7 @@ describe('Behavior Driven Shopping List', function () {
       it('render should return a string wrapped in "s', function() {
 
         apple.render().indexOf('"').should.be.equal(0);
-        apple.render().lastIndexOf('"').should.be.equal(apple.render().length));
+        apple.render().lastIndexOf('"').should.be.equal(apple.render().length);
       })
     });
 
