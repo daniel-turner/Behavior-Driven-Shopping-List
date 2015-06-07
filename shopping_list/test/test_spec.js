@@ -81,10 +81,10 @@ describe('Behavior Driven Shopping List', function () {
         apple.render().should.be.a('string');
       });
 
-      it('render should return a string wrapped in <li>s', function() {
+      it('render should return a string wrapped in <ul>s', function() {
 
-        apple.render().indexOf('<li').should.be.equal(0);
-        apple.render().lastIndexOf('</li>').should.be.above(-1);
+        apple.render().indexOf('<ul>').should.be.above(-1);
+        apple.render().lastIndexOf('</ul>').should.be.above(-1);
 
       });
 
