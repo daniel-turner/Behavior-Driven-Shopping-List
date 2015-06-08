@@ -41,22 +41,23 @@ function Shopping_List() {
 
   this.render = function() {
 
-    var list =document.createElement('ul');
+    //var list =document.createElement('ul');
 
-    // var sentence = '<ul id="ulname">';
+    var sentence = '<ul id="ulname">';
+
 
     var li = function(item) {
 
-      //sentence += item.render();
-      list.appendChild(item);
+      sentence += item.render();
+      //list.appendChild(item);
     };
 
     this.items.forEach(li);
-    // sentence += '</ul>';
+    sentence += '</ul>';
     // //console.log(sentence);
-    // return sentence;
+    return sentence;
 
-    return list.innerHTML;
+    //return list.innerHTML;
   };
 
 };
