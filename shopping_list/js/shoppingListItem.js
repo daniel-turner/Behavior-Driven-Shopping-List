@@ -24,3 +24,5 @@ function ShoppingListItem (name, description) {
     return sentence;
   }
 };
+
+// onchange="changeCheckedStatus(idx, checkbox)"
