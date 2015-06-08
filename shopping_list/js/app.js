@@ -10,3 +10,8 @@ function add_to_shopping_list(titleText, descriptionText){
 
 }
 //shoppingList.render();
+
+
+function changeCheckedStatus(idx, checkbox){
+  console.log(idx, 'do something', checkbox);
+}

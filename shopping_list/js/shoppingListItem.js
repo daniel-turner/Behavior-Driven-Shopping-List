@@ -10,8 +10,13 @@ function ShoppingListItem (name, description) {
     this.is_done = false;
   }
   this.render = function(){
+
+
+
+   // var idx = Array.prototype.indexOf.call(document.getElementById('ulname').childNodes, target);
+
     var sentence = '<li class =\"completed_' + this.is_done + '\"> \
-                      <input type="checkbox"> \
+                      <input type="checkbox"  > \
                       <span>' + this.name + '</span> \
                       <span>' + this.description + '</span>\
                     </li>';

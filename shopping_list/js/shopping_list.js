@@ -41,7 +41,7 @@ function Shopping_List() {
 
   this.render = function() {
 
-    var sentence = '<ul>';
+    var sentence = '<ul id="ulname">';
 
     var li = function(item) {
 
