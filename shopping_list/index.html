@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping List</title>
+</head>
+<body>
+
+    <input type="text" id="titleInput"><br>
+    <input type="text" id="descriptionInput"><br>
+    <button id="add_shopping_item_button">Add To Shopping List</button>
+
+  <div id="content"></div>
+
+  <script src="js/shopping_list.js"></script>
+  <script src="js/shoppingListItem.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+
+  var titleText;
+  var descriptionText;
+
+    document.getElementById('add_shopping_item_button').addEventListener('click', function(){
+
+      titleText = document.getElementById('titleInput').value;
+      descriptionText = document.getElementById('descriptionInput').value;
+
+      add_to_shopping_list(titleText, descriptionText);
+
+        document.getElementById('content').innerHTML = shoppingList.render();
+    });
+  </script>
+</body>
+</html>
