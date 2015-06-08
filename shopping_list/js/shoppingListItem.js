@@ -13,14 +13,13 @@ function ShoppingListItem (name, description) {
 
 
 
-   // var idx = Array.prototype.indexOf.call(document.getElementById('ulname').childNodes, target);
+    // var idx = Array.prototype.indexOf.call(document.getElementById('ulname').childNodes, target);
 
     // var sentence = '<li class =\"completed_' + this.is_done + '\"> \
     //                   <input type="checkbox"  > \
     //                   <span>' + this.name + '</span> \
     //                   <span>' + this.description + '</span>\
     //                 </li>';
-    // //console.log(sentence);
     // return sentence;
 
     var liItem = document.createElement('li');
@@ -28,6 +27,7 @@ function ShoppingListItem (name, description) {
 
     var checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
+    checkbox.onclick = changeCheckedStatus(this,this)
 
     var nameSpan = document.createElement('span');
     nameSpan.innerHTML = this.name;
@@ -39,6 +39,6 @@ function ShoppingListItem (name, description) {
     liItem.appendChild(nameSpan);
     liItem.appendChild(descriptionSpan);
 
-    return liItem.toString();
+    return liItem.outerHTML;
   }
 };
