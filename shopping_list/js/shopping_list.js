@@ -50,7 +50,7 @@ function Shopping_List() {
 
     this.items.forEach(li);
     sentence += '</ul>';
-    //console.log(sentence);
+    console.log(sentence);
     return sentence;
 
   };

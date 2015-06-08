@@ -5,11 +5,11 @@
   <title>Shopping List</title>
 </head>
 <body>
-  <form>
+
     <input type="text" id="titleInput"><br>
     <input type="text" id="descriptionInput"><br>
     <button id="add_shopping_item_button">Add To Shopping List</button>
-  </form>
+
   <div id="content"></div>
 
   <script src="js/shopping_list.js"></script>
@@ -17,13 +17,17 @@
   <script src="js/app.js"></script>
   <script>
 
-    var titleText = document.getElementById('titleInput').value;
-    var descriptionText = document.getElementById('descriptionInput').value;
+  var titleText;
+  var descriptionText;
 
     document.getElementById('add_shopping_item_button').addEventListener('click', function(){
 
-        add_to_shopping_list(titleText,descriptionText);
-        document.getElementById('content').innerHTML = shopping_list.render();
+      titleText = document.getElementById('titleInput').value;
+      descriptionText = document.getElementById('descriptionInput').value;
+
+      add_to_shopping_list(titleText, descriptionText);
+
+        document.getElementById('content').innerHTML = shoppingList.render();
     });
   </script>
 </body>
