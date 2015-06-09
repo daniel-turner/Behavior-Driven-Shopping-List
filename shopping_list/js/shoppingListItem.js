@@ -13,38 +13,38 @@ function ShoppingListItem (name, description) {
 
 
 
-    // var idx = Array.prototype.indexOf.call(document.getElementById('ulname').childNodes, target);
+    //var idx = Array.prototype.indexOf.call(document.getElementById('ulname').childNodes, target);
 
-    // var sentence = '<li class =\"completed_' + this.is_done + '\"> \
-    //                   <input type="checkbox"  > \
-    //                   <span>' + this.name + '</span> \
-    //                   <span>' + this.description + '</span>\
-    //                 </li>';
-    // return sentence;
+    var sentence = '<li class =\"completed_' + this.is_done + '\"> \
+                      <input type="checkbox"  > \
+                      <span>' + this.name + '</span> \
+                      <span>' + this.description + '</span>\
+                    </li>';
+    return sentence;
 
-    var liItem = document.createElement('li');
-    liItem.class = 'completed_' + this.is_done;
+  //   var liItem = document.createElement('li');
+  //   liItem.class = 'completed_' + this.is_done;
 
-    var checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.addEventListener("click", function(event) {
+  //   var checkbox = document.createElement('input');
+  //   checkbox.type = 'checkbox';
+  //   checkbox.addEventListener("click", function(event) {
 
-      console.log(event);
+  //     console.log(event);
 
-      //changeCheckedStatus()
-    });
+  //     //changeCheckedStatus()
+  //   });
 
-    var nameSpan = document.createElement('span');
-    nameSpan.innerHTML = this.name;
+  //   var nameSpan = document.createElement('span');
+  //   nameSpan.innerHTML = this.name;
 
-    var descriptionSpan = document.createElement('description');
-    descriptionSpan.innerHTML = this.description;
+  //   var descriptionSpan = document.createElement('description');
+  //   descriptionSpan.innerHTML = this.description;
 
-    liItem.appendChild(checkbox);
-    liItem.appendChild(nameSpan);
-    liItem.appendChild(descriptionSpan);
+  //   liItem.appendChild(checkbox);
+  //   liItem.appendChild(nameSpan);
+  //   liItem.appendChild(descriptionSpan);
 
-    return liItem.outerHTML;
+  //   return liItem.outerHTML;
   }
 };
 
