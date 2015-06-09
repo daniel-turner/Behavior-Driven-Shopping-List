@@ -47,3 +47,5 @@ function ShoppingListItem (name, description) {
     return liItem.outerHTML;
   }
 };
+
+// onchange="changeCheckedStatus(idx, checkbox)"

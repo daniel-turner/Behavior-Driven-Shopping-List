@@ -43,9 +43,8 @@ function Shopping_List() {
 
     //var list =document.createElement('ul');
 
-
-
     var sentence = '<ul id="ulname">';
+
 
     var li = function(item) {
 
