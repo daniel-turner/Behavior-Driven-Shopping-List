@@ -28,6 +28,13 @@
       add_to_shopping_list(titleText, descriptionText);
 
       document.getElementById('content').innerHTML = shoppingList.render();
+      var items = document.getElementById('ulname').childNodes;
+
+      items[shoppingList.items.length-1].addEventListener("change", function(event) {
+
+        console.log(event);
+      });
+
     });
   </script>
 </body>

@@ -27,7 +27,12 @@ function ShoppingListItem (name, description) {
 
     var checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
-    checkbox.onclick = changeCheckedStatus(this,this)
+    checkbox.addEventListener("click", function(event) {
+
+      console.log(event);
+
+      //changeCheckedStatus()
+    });
 
     var nameSpan = document.createElement('span');
     nameSpan.innerHTML = this.name;
