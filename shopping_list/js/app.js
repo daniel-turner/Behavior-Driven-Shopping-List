@@ -14,6 +14,7 @@ function add_to_shopping_list(titleText, descriptionText){
 
 
 
-function changeCheckedStatus(idx, checkbox){
-  console.log(idx, 'do something', checkbox);
+function changeCheckedStatus(event){
+
+  console.log(event.target.parentNode);
 }
