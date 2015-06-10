@@ -18,6 +18,7 @@ function ShoppingListItem (name, description) {
                       <input type="checkbox" onclick="changeCheckedStatus(event)" id="' + this.timestamp + '""> \
                       <span>' + this.name + '</span> \
                       <span>' + this.description + '</span>\
+                      <button onclick="removeItemButtonClicked(event)" id="button' + this.timestamp + '">x</button>\
                     </li>';
     return sentence;
 

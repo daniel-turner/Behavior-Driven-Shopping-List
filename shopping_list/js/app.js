@@ -10,26 +10,30 @@ function add_to_shopping_list(titleText, descriptionText){
   shoppingList.addItem(new_shopping_list_item);
 
 }
-//shoppingList.render();
-
-
 
 function changeCheckedStatus(event){
+
   var checked = event.toElement.checked;
-
-
 
   var index = shoppingList.timestamps.indexOf(parseInt(event.toElement.id));
 
+  if( checked ){
 
+    shoppingList.items[index].check();
 
+  }else{
 
-if( checked ){
-  shoppingList.items[index].check();
-}else{
-  shoppingList.items[index].uncheck();
+    shoppingList.items[index].uncheck();
+  }
 }
 
- console.log(shoppingList.items[index].is_done);
+function removeItemButtonClicked(event) {
 
+  var id = parseInt(event.toElement.id.slice(6));
+
+  var index = shoppingList.timestamps.indexOf(id);
+
+  shoppingList.removeItem(shoppingList.items[index]);
+
+  document.getElementById('content').innerHTML = shoppingList.render();
 }
