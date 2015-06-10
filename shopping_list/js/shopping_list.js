@@ -6,6 +6,7 @@ function Shopping_List() {
   this.addItem = function(item) {
 
     if(item instanceof ShoppingListItem) {
+      item.timestamp = parseInt(Date.now());
 
       this.items.push(item);
       this.timestamps.push(item.timestamp);
