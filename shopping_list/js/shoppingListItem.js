@@ -19,9 +19,11 @@ function ShoppingListItem (name, description) {
                       <span>' + this.name + '</span> \
                       <span>' + this.description + '</span>\
                       <button onclick="removeItemButtonClicked(event)" id="button' + this.timestamp + '">x</button>\
+                      <button onclick="editItemButtonClicked(event)" id="edits"' + this.timestamp + '">Edit Me</button>\
                     </li>';
     return sentence;
 
+//added in an edit button on line 22
 
   };
 };

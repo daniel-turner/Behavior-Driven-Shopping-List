@@ -37,3 +37,21 @@ function removeItemButtonClicked(event) {
 
   document.getElementById('content').innerHTML = shoppingList.render();
 }
+
+//Everything below is not working yet. Copy of remove item button
+
+function editItemButtonClicked(event){
+
+  var id = parseInt(event.toElement.id.slice(5));
+
+  var index = shoppingList.timestamps.indexOf(id);
+
+  console.log('fsad');
+
+
+
+  //shoppingList.removeItem(shoppingList.items[index]);
+
+  document.getElementById('content').innerHTML = shoppingList.render();
+
+}
